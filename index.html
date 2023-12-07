@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My HTML Page</title>
+  </head>
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-HXLS8GE5MX"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-HXLS8GE5MX");
+  </script>
+  <body>
+    <h1>Welcome to my test page!</h1>
+    <button onclick="trackButtonClick()">Click me!</button>
+
+    <script>
+      function trackButtonClick() {
+        gtag("event", "click", {
+          event_category: "button",
+          event_label: "Click me button",
+        });
+      }
+    </script>
+  </body>
+</html>
